@@ -1,0 +1,524 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.inner-wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.flex1 {
+  background-color: #ccc;
+}
+.flex1 header {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+.flex1 main article {
+  width: 800px;
+  margin: 10px auto;
+}
+.flex1 main article.box1 {
+  height: 200px;
+  background-color: #fff;
+}
+.flex1 main article.box2 {
+  display: flex;
+  gap: 10px;
+}
+.flex1 main article.box2 div {
+  flex: 1;
+  height: 100px;
+  background-color: #fff;
+}
+.flex1 main article.box3 {
+  display: flex;
+  gap: 10px;
+}
+.flex1 main article.box3 div {
+  flex: 1;
+  height: 100px;
+  background-color: #fff;
+}
+.flex1 main article.box4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #000;
+}
+.flex1 main article.box4 div {
+  width: calc(50% - 5px);
+  margin-right: 10px;
+  height: 100px;
+  background-color: #fff;
+}
+.flex1 main article.box4 div:last-child {
+  margin-right: 0;
+}
+
+.flex2 {
+  background-color: #ccc;
+  margin: 10px 10px 10px 160px;
+}
+.flex2 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-color: #000;
+}
+.flex2 main article {
+  margin: 10px auto;
+}
+.flex2 main article.box1 {
+  height: 300px;
+  background-color: #fff;
+}
+.flex2 main article.box2 {
+  display: flex;
+  gap: 10px;
+}
+.flex2 main article.box2 div {
+  flex: 1;
+  height: 100px;
+  background-color: #fff;
+}
+.flex2 main article.box3 {
+  height: 100px;
+  background-color: #fff;
+}
+.flex2 main article.box4 {
+  height: 50px;
+  background-color: #fff;
+}
+.flex2 main article.box5 {
+  display: flex;
+  justify-content: space-between;
+}
+.flex2 main article.box5 div {
+  width: calc(80% - 5px);
+  height: 80px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.flex2 main article.box5 div:last-child {
+  width: calc(20% - 5px);
+  margin-right: 0;
+}
+.flex2 main article.box6 {
+  display: flex;
+}
+.flex2 main article.box6 div {
+  width: calc(30% - 5px);
+  height: 100px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.flex2 main article.box6 div:last-child {
+  width: calc(70% - 5px);
+  margin-right: 0;
+}
+.flex2 main article.box7 {
+  height: 100px;
+  background-color: #fff;
+}
+
+.flex3 header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+}
+.flex3 header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex3 header h1 a {
+  display: block;
+  height: 100%;
+}
+.flex3 header .sns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex3 header .login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex3 main article.box1 {
+  position: relative;
+  height: 300px;
+  background-color: #dcdcdc;
+}
+.flex3 main article.box1 .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex3 main article.box1 .btn.prev {
+  left: 10px;
+}
+.flex3 main article.box1 .btn.next {
+  right: 10px;
+}
+.flex3 main article.box1 .pagination {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.flex3 main article.box1 .pagination span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.flex3 main article.box1 .pagination span:last-child {
+  margin-right: 0;
+}
+.flex3 main article.box1 .pagination span.active {
+  background-color: #777;
+}
+.flex3 main article.box2 {
+  padding: 100px 0;
+}
+.flex3 main article.box2 h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.flex3 main article.box2 ul {
+  display: flex;
+  gap: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.flex3 main article.box2 ul li {
+  flex: 1;
+}
+.flex3 main article.box2 ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #333;
+}
+.flex3 main article.box2 ul li a img {
+  margin-bottom: 10px;
+}
+.flex3 main article.box2 ul li a p {
+  padding: 10px;
+  background-color: #fff;
+}
+.flex3 main article.box3 {
+  background-color: #333;
+  padding: 100px 0;
+}
+.flex3 main article.box3 ul {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.flex3 main article.box3 ul li {
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.flex3 main article.box3 ul li:last-child {
+  margin-bottom: 0;
+}
+.flex3 footer {
+  height: 100px;
+  background-color: #dcdcdc;
+}
+
+.flex4 header .group-flex {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #000;
+}
+.flex4 header .group-flex h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex4 header .group-flex h1 a {
+  display: block;
+}
+.flex4 header .group-flex .sns {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex4 header .group-flex .login {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex4 header .menu-area {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ccc;
+}
+.flex4 header .menu-area ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.flex4 main {
+  width: 800px;
+  margin: 10px auto;
+}
+.flex4 main article.box1 {
+  background-color: #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+.flex4 main article.box1 .top {
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.flex4 main article.box1 .bottom {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+}
+.flex4 main article.box1 .bottom .left {
+  margin-right: 10px;
+  width: calc(100% - 160px);
+}
+.flex4 main article.box1 .bottom .left ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex4 main article.box1 .bottom .left ul li {
+  width: calc((100% - 20px) / 3);
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  margin: 0 10px 10px 0;
+}
+.flex4 main article.box1 .bottom .left ul li:nth-child(3n) {
+  margin-right: 0;
+}
+.flex4 main article.box1 .bottom .right {
+  width: 150px;
+  height: 210px;
+  background-color: #000;
+}
+.flex4 main article.box2 {
+  padding: 10px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.flex4 main article.box2 ul li {
+  margin-bottom: 10px;
+}
+.flex4 main article.box2 ul li a {
+  display: flex;
+}
+.flex4 main article.box2 ul li a img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.flex4 main article.box2 ul li a p {
+  flex: 1;
+  overflow: hidden;
+  background-color: #fff;
+}
+.flex4 footer {
+  height: 100px;
+  background-color: #ccc;
+}
+
+.flex5 header {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+.flex5 main .box1 {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.flex5 main .box1 div {
+  position: relative;
+  flex: 1;
+  height: 300px;
+  background-color: #333;
+}
+.flex5 main .box1 div:last-child .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.flex5 main .box1 div:last-child .btn.prev {
+  left: 10px;
+}
+.flex5 main .box1 div:last-child .btn.next {
+  right: 10px;
+}
+.flex5 main .banner {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+}
+.flex5 main .box2 {
+  padding: 10px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+.flex5 main .box2 .list1 {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  gap: 10px;
+}
+.flex5 main .box2 .list1 div {
+  flex-grow: 7;
+  height: 100px;
+  background-color: #333;
+}
+.flex5 main .box2 .list1 div:last-child {
+  flex-grow: 3;
+}
+.flex5 main .box2 .list2 {
+  display: flex;
+  padding: 0 10px 10px 10px;
+  background-color: #fff;
+  gap: 10px;
+}
+.flex5 main .box2 .list2 div {
+  width: calc(20% - 5px);
+  height: 100px;
+  background-color: #333;
+}
+.flex5 main .box2 .list2 div:last-child {
+  width: calc(80% - 5px);
+}
+.flex5 main .box3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #dcdcdc;
+}
+.flex5 main .box3 .navi {
+  display: flex;
+}
+.flex5 main .box3 .navi a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.flex5 main .box3 .navi a:first-child {
+  margin-right: -1px;
+}
+.flex5 main .box4 {
+  margin: 10px 0;
+}
+.flex5 main .box4 ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.flex5 main .box4 ul li {
+  width: calc((100% - 30px) / 4);
+}
+.flex5 main .box4 ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #06f;
+}
+.flex5 main .box4 ul li a strong {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+}
+.flex5 main .box4 ul li a p {
+  padding: 10px;
+  background-color: #fff;
+}
+.flex5 footer {
+  height: 100px;
+  background-color: #dcdcdc;
+}

@@ -1,0 +1,148 @@
+.flex5 {
+	header {
+		width: 100%;
+		height: 100px;
+		background-color: #000;
+	}
+
+	main {
+		.box1 {
+			display: flex;
+			gap: 10px;
+			margin: 10px 0;
+			div {
+				position: relative;
+				flex: 1;
+				height: 300px;
+				background-color: #333;
+
+				&:last-child {
+					.btn {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 50px;
+						height: 50px;
+						background-color: $bg;
+
+						&.prev {
+							left: 10px;
+						}
+
+						&.next {
+							right: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.banner {
+			width: 100%;
+			height: 100px;
+			background-color: #000;
+			color: #fff;
+		}
+
+		.box2 {
+			padding: 10px;
+			background-color: #ccc;
+			margin: 10px 0;
+
+			.list1 {
+				display: flex;
+				padding: 10px;
+				background-color: $bg;
+				gap: 10px;
+
+				div {
+					flex-grow: 7;
+					height: 100px;
+					background-color: #333;
+
+					&:last-child {
+						flex-grow: 3;
+					}
+				}
+			}
+
+			.list2 {
+				display: flex;
+				padding: 0 10px 10px 10px;
+				background-color: $bg;
+				gap: 10px;
+
+				div {
+					width: calc(20% - 5px);
+					height: 100px;
+					background-color: #333;
+
+					&:last-child {
+						width: calc(80% - 5px);
+					}
+				}
+			}
+		}
+
+		.box3 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 50px;
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #dcdcdc;
+
+			.navi {
+				display: flex;
+				a {
+					display: block;
+					width: 40px;
+					height: 40px;
+					background-color: $bg;
+					border: 1px solid #000;
+
+					&:first-child {
+						margin-right: -1px;
+					}
+				}
+			}
+		}
+
+		.box4 {
+			margin: 10px 0;
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+
+				li {
+					width: calc((100% - 30px) / 4);
+
+					a {
+						display: block;
+						padding: 10px;
+						background-color: #06f;
+
+						strong {
+							display: block;
+							margin: 10px 0;
+							padding: 10px;
+							background-color: $bg;
+						}
+
+						p {
+							padding: 10px;
+							background-color: $bg;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		height: 100px;
+		background-color: #dcdcdc;
+	}
+}

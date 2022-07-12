@@ -1,0 +1,158 @@
+.flex3 {
+	header {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		background-color: #000;
+
+		h1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 50px;
+			background-color: $bg;
+
+			a {
+				display: block;
+				height: 100%;
+			}
+		}
+
+		.sns {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			background-color: $bg;
+		}
+
+		.login {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50px;
+			height: 50px;
+			background-color: $bg;
+		}
+	}
+
+	main {
+		article {
+			&.box1 {
+				position: relative;
+				height: 300px;
+				background-color: #dcdcdc;
+
+				.btn {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 50px;
+					height: 50px;
+					background-color: $bg;
+
+					&.prev {
+						left: 10px;
+					}
+					&.next {
+						right: 10px;
+					}
+				}
+
+				.pagination {
+					position: absolute;
+					display: flex;
+					bottom: 10px;
+					left: 50%;
+					transform: translateX(-50%);
+
+					span {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 50px;
+						height: 50px;
+						background-color: $bg;
+						border-radius: 50%;
+						margin-right: 10px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						&.active {
+							background-color: #777;
+						}
+					}
+				}
+			}
+
+			&.box2 {
+				padding: 100px 0;
+
+				h2 {
+					text-align: center;
+					font-size: 50px;
+					font-weight: bold;
+					margin-bottom: 50px;
+				}
+
+				ul {
+					display: flex;
+					gap: 10px;
+					width: 800px;
+					margin: 0 auto;
+
+					li {
+						flex: 1;
+
+						a {
+							display: block;
+							padding: 10px;
+							background-color: #333;
+
+							img {
+								margin-bottom: 10px;
+							}
+
+							p {
+								padding: 10px;
+								background-color: $bg;
+							}
+						}
+					}
+				}
+			}
+
+			&.box3 {
+				background-color: #333;
+				padding: 100px 0;
+
+				ul {
+					width: 800px;
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+
+					li {
+						height: 100px;
+						background-color: $bg;
+						margin-bottom: 10px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		height: 100px;
+		background-color: #dcdcdc;
+	}
+}

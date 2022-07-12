@@ -1,0 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font: inherit;
+}
+
+body {
+	line-height: 1;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	margin: -1px;
+	clip: rect(0 0 0 0);
+}
+
+.inner-wrap {
+	width: 800px;
+	margin: 0 auto;
+}
